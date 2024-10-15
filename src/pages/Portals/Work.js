@@ -1,9 +1,6 @@
 import React from "react";
-import { Box, useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Box } from "@mui/material";
 
 export default function Work() {
-  const theme = useTheme();
-
   return <Box></Box>;
 }

@@ -270,30 +270,3 @@ export default function Deploy() {
     </Box>
   );
 }
-
-const cards = [
-  {
-    title: "Reduce Dev Time By",
-    price: "90%",
-    content:
-      "Cut your development time and get virtual worlds up and running in miutes.",
-  },
-  {
-    title: "Cut Resource Dependancies By",
-    price: "50%",
-    content:
-      "Reduce your design resources by leveraging our prebuilt 3D assets and virtual worlds.",
-  },
-  {
-    title: "Save A Bundle Per Project",
-    price: "$40K",
-    content:
-      "On average a traditional virtual world can cost a fortune to produce. Earn more by cutting resources and time. ",
-  },
-  {
-    title: "Increase Output Of Virtual Worlds",
-    price: "24k",
-    content:
-      "Instead of spending six months iterating and developing you can publish in one week.",
-  },
-];

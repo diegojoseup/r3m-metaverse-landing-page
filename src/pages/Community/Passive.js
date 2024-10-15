@@ -31,7 +31,6 @@ export default function Passive() {
                 maxWidth: 1212,
                 textOverflow: "ellipsis",
                 overflow: "hidden",
-                fontWeight: 600,
                 fontfamily: "SF UI Display",
                 lineHeight: 1,
               }}
@@ -64,30 +63,3 @@ export default function Passive() {
     </Box>
   );
 }
-
-const cards = [
-  {
-    title: "Commission",
-    price: "1",
-    content:
-      "By holding your HMMM token you qualify for commissions from transactions in our Wallet app. ",
-  },
-  {
-    title: "Airdrops",
-    price: "2",
-    content:
-      "Each month we will airdrop tokens to quallified holders if you are staked or not.",
-  },
-  {
-    title: "NFT's",
-    price: "3",
-    content:
-      "From time ti time our company will release one of a kind NFTs which token holders will recieve.",
-  },
-  {
-    title: "Discounts",
-    price: "4",
-    content:
-      "Users who have connected their wallet and hold 5000 tokens will recieve a 20% marketplace discount.",
-  },
-];

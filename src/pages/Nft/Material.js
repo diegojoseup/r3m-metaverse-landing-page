@@ -15,7 +15,7 @@ export default function Material() {
   const theme = useTheme();
   const matchUpSm = useMediaQuery(theme.breakpoints.up("sm"));
   const matchUpMd = useMediaQuery(theme.breakpoints.up("md"));
-  const matchUpXs = useMediaQuery(theme.breakpoints.up("xs"));
+
   return (
     <Box
       sx={{

@@ -102,8 +102,8 @@ export default function Token() {
                     borderRadius: 10,
                     px: matchUpSm ? 5 : 2,
                     py: 1,
-                    bgcolor: user == 1 ? "#000" : "transparent",
-                    color: user == 1 ? "#fff" : "rgba(255,255,255,0.3)",
+                    bgcolor: user === 1 ? "#000" : "transparent",
+                    color: user === 1 ? "#fff" : "rgba(255,255,255,0.3)",
                   }}
                   onClick={() => handleUser(1)}
                 >
@@ -115,8 +115,8 @@ export default function Token() {
                     borderRadius: 10,
                     px: matchUpSm ? 5 : 2,
                     py: 1,
-                    bgcolor: user == 2 ? "#000" : "tranparent",
-                    color: user == 2 ? "#fff" : "rgba(255,255,255,0.3)",
+                    bgcolor: user === 2 ? "#000" : "tranparent",
+                    color: user === 2 ? "#fff" : "rgba(255,255,255,0.3)",
                   }}
                   onClick={() => handleUser(2)}
                 >
