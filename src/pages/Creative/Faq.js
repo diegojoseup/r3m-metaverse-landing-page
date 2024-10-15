@@ -1,62 +1,58 @@
-import React from 'react';
-import  {
-    Accordion,
-    AccordionDetails,
-    AccordionSummary,
-    Box, 
-    Stack, 
-    Typography,
-    useMediaQuery
-} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import React from "react";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
-export default function Faq () {
-    const theme = useTheme();
-    const matchUpSm = useMediaQuery(theme.breakpoints.up('sm'));
-    const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
-    const [expanded, setExpanded] = React.useState(false);
+export default function Faq() {
+  const theme = useTheme();
+  const matchUpSm = useMediaQuery(theme.breakpoints.up("sm"));
+  const matchUpMd = useMediaQuery(theme.breakpoints.up("md"));
+  const [expanded, setExpanded] = React.useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-    };
-  
-    return (
-        <Box
-            sx={{
-                px: matchUpMd ? 27 : matchUpSm ? 9 : 5,
-                py: 12
-            }}
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
+  return (
+    <Box
+      sx={{
+        px: matchUpMd ? 27 : matchUpSm ? 9 : 5,
+        py: 12,
+      }}
+    >
+      {items.map((item, key) => (
+        <Accordion
+          key={key}
+          expanded={expanded === key}
+          onChange={handleChange(key)}
+          sx={{
+            bgcolor: "#000",
+            backgroundImage: "none",
+          }}
         >
-        {items.map((item, key) => 
-            <Accordion 
-                key={key}
-                expanded={expanded === key} 
-                onChange={handleChange(key)}
-                sx={{
-                    bgcolor: '#000',
-                    backgroundImage: 'none'
-                }}
-            >
-                <AccordionSummary
-                    aria-controls="panel1bh-content"
-                    id={`panel${key}bh-header"`}
-                    sx={{
-                        py: 1
-                    }}
-                >
-                    <Typography variant="h4" sx={{ lineHeight:  1 }}>
-                        {item.title}
-                    </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        {item.content}
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-        )}
-            {/* <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+          <AccordionSummary
+            aria-controls="panel1bh-content"
+            id={`panel${key}bh-header"`}
+            sx={{
+              py: 1,
+            }}
+          >
+            <Typography variant="h4" sx={{ lineHeight: 1 }}>
+              {item.title}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{item.content}</Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
+      {/* <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                 <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel2bh-content"
@@ -110,30 +106,37 @@ export default function Faq () {
                 </Typography>
                 </AccordionDetails>
             </Accordion> */}
-        </Box>
-    )
+    </Box>
+  );
 }
 
-const items = [{
-        title: 'Creative Concepts',
-        content: '',
-    }, {
-        title: 'Virtual World Integration',
-        content: '',
-    }, {
-        title: 'Immersive Video',
-        content: '',
-    }, {
-        title: 'AR/VR music visualizers',
-        content: ''
-    }, {
-        title: 'Social Filters',
-        content: ''
-    }, {
-        title: 'AR/VR Visual Effects',
-        content: ''
-    }, {
-        title: 'Digital Marketing + OOH',
-        content: ''
-    }
-]
+const items = [
+  {
+    title: "Creative Concepts",
+    content: "",
+  },
+  {
+    title: "Virtual World Integration",
+    content: "",
+  },
+  {
+    title: "Immersive Video",
+    content: "",
+  },
+  {
+    title: "AR/VR music visualizers",
+    content: "",
+  },
+  {
+    title: "Social Filters",
+    content: "",
+  },
+  {
+    title: "AR/VR Visual Effects",
+    content: "",
+  },
+  {
+    title: "Digital Marketing + OOH",
+    content: "",
+  },
+];
